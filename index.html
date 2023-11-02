@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Durgesh's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8c9395fc43.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo1.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p><b>Computer Science Student</b></p>
+                <h1>Hi, I'm <span>Durgesh</span> </h1>
+            </div>
+        </div>
+    </div>  
+
+    <!-----------------------------------About----------------------------------------------------->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="profile.png">
+
+                </div>
+                 <div class="about-col-2">
+                     <h1 class="subtitle"> About Me</h1>
+                     <p>Hello!!, I am Durgesh Mishra and I am a computer Science Student.I am currently doing my Graduation in Computer Science from SIES Nerul .I have good knowledge of android studio as well as I'm familiar with java and web development concepts  . Adaptable and hardworking guy. </p>
+
+                     <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                     </div>
+
+                     <div class="tab-contents active-tab" id="Skills">
+
+                        <ul>
+                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>App Development</span><br>Building Android apps</li>
+
+                        </ul>
+                     </div>
+
+                     <div class="tab-contents" id="Experience">
+                           <p>Fresher</p>
+                     </div>
+
+                     <div class="tab-contents"id="Education">
+
+                        <ul>
+                            
+                            <li><span>2021-current</span><br>Bsc.CS from SIES Nerul</li>
+                            <li><span>2022</span><br>Android Development from PrimeIt</li>
+
+                        </ul>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-------------------------------------Services----------------------------------------------->
+    
+  <div id="services">
+    <div class="container">
+        <h1 class="subtitle">My Services</h1>
+        <div class="services-list">
+        <div>
+            <i class="fa-brands fa-app-store"></i>
+            <h2>App Development</h2>
+            <p>Familiar with Android Studio and its essential for developing android apps.Always ready to work on this type of projects.</p>
+            <a href="#">learn more</a>
+        </div>
+        <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Development</h2>
+            <p>Always interested in this field of profession as wanted to be a successfull web developer,trying always with new  projects to enhance the skills.</p>
+            <a href="#">learn more</a>
+        </div>
+        </div>
+
+    </div>
+  </div>
+
+  <!--------------------------------Projects------------------------------------------------------->
+  <div id="projects">
+    <div class="container">
+        <h1 class="subtitle">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="work1.jpg">
+                <div class="layer">
+                    <h3>Restaurant App</h3>
+                    <p>Zaika is a restaurant app which directly connects the customer to the restaurant without any third party interference.</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="work2.jpg">
+                <div class="layer">
+                    <h3>Main Activity</h3>
+                    <p>In this activity User can login if he or she is existing user or else register if new user .</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="work3.jpg">
+                <div class="layer">
+                    <h3>Login Activity</h3>
+                    <p>In this acitivity user login with his credentials , User can forget password and reset incase if password forgot .</p>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+  </div>
+
+
+  <!--------------------------------------------------------Contact------------------------------------------------------------------------>
+
+
+
+  <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="subtitle">Contact Me</h1>
+                  <p><i class="fas fa-paper-plane"></i>durgeshcollab@gmail.com</p>
+                  <p><i class="fas fa-phone-square-alt"></i>9372585311</p>
+                  <div class="social-icons">
+                     <a href=""><i class="fab fa-facebook"></i></a>
+                     <a href="https://www.instagram.com/durgesh_2841/"><i class="fab fa-instagram"></i></a>
+                     <a href="https://www.linkedin.com/in/durgesh-mishra-20a39a1b1/"><i class="fab fa-linkedin"></i></a>
+                  </div>
+                  <a href="Resume.pdf" download class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+
+            </div>
+        </div>
+    </div>
+  </div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+
+    }
+</script>
+
+
+<script>
+
+var sidemenu = document.getElementById("sidemenu");
+
+function openmenu(){
+    sidemenu.style.right="0";
+}
+function closemenu(){
+    sidemenu.style.right="-200px";
+}
+
+
+
+</script>
+
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbz6CWMtgqj_S7DN3H9W73FlynrZweaOepsyA-S6BePnvseTqPAzdjjHqi2hfM7f9CZL/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg =document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => 
+        {  msg.innerHTML="Message sent successfully"
+        setTimeout(function(){
+            msg.innerHTML=""
+        },5000)
+         form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
